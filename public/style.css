@@ -1,0 +1,59 @@
+:root{
+    --cell-size: 2rem;
+    --cell-spacing: 0.1rem;
+    --border-radius: 0.2rem;
+    --border-style: rgb(200 200 200) solid 1px;
+    --color-board: rgb(245 245 245);
+    --color-hover: rgb(230 230 230);
+    --color-X: rgb(0 140 0);
+    --color-bg-X: rgb(145 255 145);
+    --color-O: rgb(0 0 160);
+    --color-bg-O: rgb(150 150 255);
+    /* --color-danger: rgb(255 80 80); */
+}
+
+.game {
+    display: inline flex;
+    flex-flow: column;
+    background-color: var(--color-board);
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+}
+
+.state {
+    text-align: center;
+    margin: var(--cell-spacing);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--cell-spacing);
+    margin: var(--cell-spacing);
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    width: var(--cell-size);
+    line-height: var(--cell-size);
+    text-align: center;
+    background-color: var(--color-board);
+    border: var(--border-style);
+    border-radius: var(--border-radius);
+}
+
+.cell:hover {
+    background-color: var(--color-hover);
+}
+
+.cell.side-X {
+    background-color: var(--color-bg-X);
+    color: var(--color-X);
+    border-color: var(--color-X);
+}
+
+.cell.side-O {
+    background-color: var(--color-bg-O);
+    color: var(--color-O);
+    border-color: var(--color-O);
+}
