@@ -7,7 +7,4 @@ edition = "2021"
 
 [dependencies]
 tic-tac-toe = { git = "https://github.com/hkBst/tic-tac-toe" }
-dioxus = "0.4.0"
-dioxus-web = "0.4.0"
-
-
+dioxus = { version = "0.5", features=["web"] }
